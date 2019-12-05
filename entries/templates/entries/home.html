@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>IITU-DEV - Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="{% static 'entries/i/logo.png' %}" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+		<link href="{% static 'entries/css/style.css' %}" rel="stylesheet" />
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			</head> 
+<body>
+<!-- Header 1 -->
+
+<header class="pt-195 pb-110 bg-light header_1">
+
+<!-- Header Menu 1 -->
+
+	<nav class="header_menu_1 pt-30 pb-30 mt-30">
+		<div class="container px-xl-0">
+			<div class="row justify-content-center align-items-center f-18 medium">
+				<a href = "" target="_self" class="col-lg-3 logo" data-aos-duration="500" data-aos="fade-down" data-aos-delay="1000">IITU-DEV</a>
+				<div class="col-lg-6 text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
+					<a href="/" class="link color-heading mx-15">Home</a>
+					<a href="{% url 'blog_view' %}" class="link color-heading mx-15">Blogs</a>
+					<a href="" class="link color-heading mx-15">Contacts</a>
+					<!-- <a href="#" class="link color-heading f-16 mx-15"><i class="fas fa-search"></i></a> -->
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-end align-items-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="1000">
+				<a href="{% url 'login' %}" class="mr-20 link color-heading">Sign In</a>
+				<a href="{% url 'register' %}" target = "_self" class="btn sm action-1">Sign Up</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="mb-3 logo d-block d-xl-none text-center logo_mobile">IITU-DEV</div>
+		<h1 class="big text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">IITU-DEV</h1>
+		<div class="mw-600 mx-auto mt-30 f-22 color-heading text-center text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+			We made it so beautiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!		</div>
+		
+		<div class="mt-80 text-center buttons" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+			<div><a href="{% url 'register' %}" class="btn lg action-1">Join Now!</a></div>
+		</div>
+	</div>
+</header>
+
+<!-- Showcase 1 -->
+
+<section class="showcase_1 bg-light pt-105 pb-95">
+	<div class="container px-xl-0">
+		<div class="row justify-content-center text-center">
+			<div class="col-xl-8 col-lg-10">
+				<h2 class="small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Interesting Content</h2>
+				<div class="mt-15 mb-30 f-22 color-heading text-adaptive description" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+					IITU-DEV contains components and complex blocks that can easily be integrated into almost.
+				</div>
+	
+			</div>
+		</div>
+		<div class="mt-10 row justify-content-center text-center text-md-left">
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+				<a href="" class="d-block"><img srcset="{% static 'entries/i/airpods-apple-cellphone-788946@2x.jpg' 2x %}" src="{% static 'entries/i/airpods-apple-cellphone-788946.jpg' %}" class="radius10 img-fluid" alt="" /></a>
+				<a href="" class="mt-20 mb-10 f-22 link color-main title">iPhone Features</a>
+				<div class="color-heading text-adaptive">
+					IITU-DEV works fine on devices 
+					supporting Retina Display. Feel the clarity!	
+				</div>
+			</div>
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+				<a href="" class="d-block"><img srcset="{% static 'entries/i/code-coder-coding-270404@2x.jpg' 2x %}" src="{% static 'entries/i/code-coder-coding-270404.jpg' %}" class="radius10 img-fluid" alt="" /></a>
+				<a href="" class="mt-20 mb-10 f-22 link color-main title">Bootstrap Based Design</a>
+				<div class="color-heading text-adaptive">
+					Ready-made bootstrap based samples for your project.
+				</div>
+			</div>
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+				<a href="#" class="d-block"><img srcset="{% static 'entries/i/close-up-diagram-drawing-1178498@2x.jpg' 2x %}" src="{% static 'entries/i/close-up-diagram-drawing-1178498@2x.jpg' %}" class="radius10 img-fluid" alt="" /></a>
+				<a href="#" class="mt-20 mb-10 f-22 link color-main title">Prototyping</a>
+				<div class="color-heading text-adaptive">
+					We used only time-tested technologies for <br />
+					the best results.
+				</div>
+			</div>
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+				<a href="#" class="d-block"><img srcset="{% static 'entries/i/architectural-design-architecture-art-2815056@2x.jpg' 2x %}" src="{% static 'entries/i/architectural-design-architecture-art-2815056 .jpg' %}" class="radius10 img-fluid" alt="" /></a>
+				<a href="#" class="mt-20 mb-10 f-22 link color-main title">More than Image</a>
+				<div class="color-heading text-adaptive">
+					We prepared some high-quality photos, that 
+					you can use in your projects.
+				</div>
+			</div>
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+				<a href="#" class="d-block"><img srcset="{% static 'entries/i/access-algorithm-binary-193349@2x.jpg' 2x %}" src="{% static 'entries/i/access-algorithm-binary-193349.jpg}' %" class="radius10 img-fluid" alt="" /></a>
+				<a href="#" class="mt-20 mb-10 f-22 link color-main title">Algorithms</a>
+				<div class="color-heading text-adaptive">
+					IITU-DEV contains Algorithms <br />
+					which can use in your project.
+				</div>
+			</div>
+			<div class="mt-70 col-lg-4 col-md-6 col-sm-9 block" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+				<a href="#" class="d-block"><img srcset="% static 'entries/i/black-and-white-books-connection-251225@2x.jpg' 2x %" src="{% static 'entries/i/black-and-white-books-connection-251225.jpg' %}" class="radius10 img-fluid" alt="" /></a>
+				<a href="#" class="mt-20 mb-10 f-22 link color-main title">More than Design</a>
+				<div class="color-heading text-adaptive">
+					Carefully crafted precise design, with 
+					harmonious typography and perfect <br />
+					padding.
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Team 1 -->
+
+<section class="team_1 bg-light pt-100 pb-100 text-center">
+	<div class="container px-xl-0">
+		<div class="row justify-content-center">
+			<div class="col-xl-8 col-lg-10">
+				<h2 class="mb-20 small" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Our Awesome Team</h2>
+				<div class="f-22 color-heading text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+					Our team consists of students from IITU - IITU best university in the world
+				</div>
+				<div data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+			
+				</div>
+			</div>
+		</div>
+		<div class="mt-20 row justify-content-center">
+			<div class="mt-60 col-lg-4 col-md-7 col-sm-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+				<div class="radius10 pt-50 block">
+					<img srcset="{% static 'entries/i/Tima.jpg' 2x %}" src="{% static 'entries/i/Tima.jpg' %}" class="img-fluid" alt="" />
+					<div class="mt-25 mb-15 f-22 title">Adilzhanov Rasul</div>
+					<div class="f-14 semibold text-uppercase sp-20 color-heading">Tech Lead, Back-end developer</div>
+					<div class="mt-35 row no-gutters block_socials">
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-twitter"></i></a>
+						</div>
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-facebook-square"></i></a>
+						</div>
+						<div class="col-4">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-dribbble"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-60 col-lg-4 col-md-7 col-sm-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+				<div class="radius10 pt-50 block">
+					<img srcset="{% static 'entries/i/Tima.jpg' 2x %}" src="{% static 'entries/i/Tima.jpg' %}" class="radius10 img-fluid" alt="" />
+					<div class="mt-25 mb-15 f-22 title">Koval Timur</div>
+					<div class="f-14 semibold text-uppercase sp-20 color-heading">Database Developer</div>
+					<div class="mt-35 row no-gutters block_socials">
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-twitter"></i></a>
+						</div>
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-facebook-square"></i></a>
+						</div>
+						<div class="col-4">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-dribbble"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-60 col-lg-4 col-md-7 col-sm-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+				<div class="radius10 pt-50 block">
+					<img srcset="{% static 'entries/i/Tima.jpg' 2x %}" src="{% static 'entries/i/Tima.jpg' %}" class="radius10 img-fluid" alt="" />
+					<div class="mt-25 mb-15 f-22 title">Issabek Bekezhan</div>
+					<div class="f-14 semibold text-uppercase sp-20 color-heading">Full Stack Developer</div>
+					<div class="mt-35 row no-gutters block_socials">
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-twitter"></i></a>
+						</div>
+						<div class="col-4 border_right">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-facebook-square"></i></a>
+						</div>
+						<div class="col-4">
+							<a href="#" class="link f-22 lh-60 color-heading"><i class="fab fa-dribbble"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Footer 1 -->
+
+<footer class="footer_1 bg-light pt-75 pb-65 text-center">
+	<div class="container px-xl-0">
+		<div class="row justify-content-between align-items-center lh-40 links">
+			<div class="col-lg-4 col-sm-6 text-sm-right text-lg-left order-1 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+				<a href="#" class="mr-15 link color-main">About</a>
+				<a href="#" class="mx-15 link color-main">Policy</a>
+				<a href="#" class="mx-15 link color-main">Terms</a>
+			</div>
+			<div class="mb-10 mb-lg-0 col-lg-auto order-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+				<a href="#" class="logo link color-main">IITU-DEV</a>
+			</div>
+			<div class="col-lg-4 col-sm-6 text-sm-left text-lg-right order-2 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+				<a href="#" class="mr-15 link color-main">Contacts</a>
+				<a href="#" class="mx-15 link color-main"><i class="fab fa-twitter"></i></a>
+				<a href="#" class="mx-15 link color-main"><i class="fab fa-facebook-square"></i></a>
+				<a href="#" class="ml-15 link color-main"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="mt-10 col-xl-4 col-lg-5 col-md-6 col-sm-8" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+				<div class="color-heading text-adaptive">
+					Be sure to take a look at our <a href="#" class="link color-heading">Terms of Use</a> <br />
+					and <a href="#" class="link color-heading">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- forms alerts -->
+<div class="alert alert-success alert-dismissible alert-form-success" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	Thanks for your message!
+</div>
+<div class="alert alert-warning alert-dismissible alert-form-check-fields" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	Please, fill in required fields.
+</div>
+<div class="alert alert-danger alert-dismissible alert-form-error" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	An error occurred while sending data :(
+</div>
+<!-- popup with video -->
+<div class="overlay"></div>
+
+<div class="video_popup">
+	<a class="close">
+		<img srcset="{% static 'entries/i/close_white@2x.png' 2x %}" src="{% static 'entries/i/close_white.png' %}" alt="" />
+	</a>
+	<div class="d-flex align-items-center justify-content-center w-full h-full iframe_container"></div>
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="{% static 'entries/js/jquery.maskedinput.min.js' %}"></script>
+
+<script src="{% static 'entries/js/script.js' %}"></script>
+
+</body>
+</html>

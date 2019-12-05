@@ -1,0 +1,26 @@
+{% extends 'users/base_profile.html' %}
+{% block content %}
+<div class="px-4 pt-0 pb-4 bg-dark">
+        <div class="media align-items-end profile-header">
+            <div class="profile mr-3"><img src="{{ request.user.userprofile.image.url }}" alt="..." width="200" height="200" class="rounded mb-2 img-thumbnail"><a href="{% url 'edit_view' %}" class="btn btn-dark btn-sm btn-block">Edit profile</a></div>
+            <div class="media-body mb-5 text-white">
+                <br><br><br>
+                <br>
+                <h4 class="mt-0 mb-0">{{ request.user.get_full_name }}</h4>
+                <br>
+                <h5 class="mt-0 mb-0">{{ request.user.email  }}</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-4 px-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class="mb-0">Recent posts</h5><a href="{% url 'blog_view' %}" class="btn btn-link text-muted">Show all</a>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+                <div class="col-lg-6 mb-2 pr-lg-1"><a href="{% url 'post_view' post.pk %}"><img src="{{ post.image.url }}" alt="" class="img-fluid rounded shadow-sm" height="160" width="240"></a></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

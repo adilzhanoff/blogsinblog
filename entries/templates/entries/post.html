@@ -1,0 +1,32 @@
+{% extends 'entries/base.html' %}
+{% block content %}
+  <!-- Blog Entries Column -->
+  <div class="col-md-8">
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          <a href="{% url 'blog_view' %}" class="btn btn-primary btn-sm">All Posts</a>
+          {% if object.image %}
+            <div class="card mb-4 mt-4">
+              <img src="{{ object.image.url }}" alt="..." height="350" width="726">
+            </div>
+          {% endif %}
+          <div class="card-body">
+            <h2 class="card-title">{{ object.title }}</h2>
+            <p class="card-text">{{ object.text|linebreaks }}</p>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ object.date }}
+            <span class= "text-info mr-2">{{ object.author }}</span>
+          </div>
+          {% if object.tags.all %}
+          <div class="card-footer text-muted">
+            Tags:
+            {% for tag in object.tags.all %}
+                <a href="/blog/?q={{ tag }}"><span class= "text-info mr-2">#{{ tag }} </span></a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <a href="{% url 'delete_view' object.pk %}" class="btn btn-primary btn-sm">Delete the Post</a>
+        </div>
+    </div>
+{% endblock %}

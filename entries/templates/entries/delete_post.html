@@ -1,0 +1,21 @@
+{% extends 'entries/base.html' %}
+{% block content %}
+  <!-- Blog Entries Column -->
+  <div class="col-md-8">
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+         <div class="card-header">
+             Delete Post
+         </div>
+          <div class="card-body">
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    <div class="card-header">
+                      Do you want to delete the post?
+                    </div>
+                    <p><input type="submit" value="Yes" class="btn btn-primary btn-sm"> <a href="{% url 'blog_view' %}" class="btn btn-primary btn-sm">No</a></p>
+                </form>
+          </div>          
+        </div>
+    </div>
+{% endblock %}

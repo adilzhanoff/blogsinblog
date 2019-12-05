@@ -1,0 +1,43 @@
+{% extends 'entries/blog_search.html' %}
+{% block content %}
+  <!-- Blog Entries Column -->
+  <div class="col-md-8">
+
+      {% for post in blog_posts %}
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          {% if post.image %}
+            <div class="card mb-4 mt-4">
+              <img src="{{ post.image.url }}" alt="..." height="350" width="726">
+            </div>
+          {% endif %}
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.text|truncatechars:300 }}</p>
+            <a href="{% url 'post_view' post.pk %}" class="btn btn-primary btn-sm">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ post.date }}
+            <span class= "text-info mr-2">{{ post.author }}</span>
+          </div>
+        </div>
+      {% endfor %}
+
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center mb-4">
+        {% if blog_posts.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page=1">First</a>
+          <a class="page-link" href="?page={{blog_posts.previous_page_number}}">&larr; Previous Page</a>
+        </li>
+        {% endif %}
+        {% if blog_posts.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{blog_posts.next_page_number}}">Next Page &rarr;</a>
+          <a class="page-link" href="?page={{blog_posts.paginator.num_pages}}">Last</a>
+        </li>
+        {% endif %}
+      </ul>
+
+    </div>
+{% endblock %}

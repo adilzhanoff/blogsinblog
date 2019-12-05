@@ -1,0 +1,12 @@
+{% extends "entries/base.html" %}
+
+{% block content %}
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+        <div class="card mb-4 mt-4">
+            <h4>You have been succesfully logged out!</h4>
+            <h4><a href="{% url 'login' %}">Log Back In</a></h4>
+            <h4><a href="{% url 'register' %}">Sign Up</a></h4>
+        </div>
+    </div>
+{% endblock %}

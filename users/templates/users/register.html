@@ -1,0 +1,19 @@
+{% extends 'entries/base.html' %}
+{% block content %}
+  <!-- Blog Entries Column -->
+  <div class="col-md-8">
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+         <div class="card-header">
+             Create a New Account
+         </div>
+          <div class="card-body">
+              <form method="POST" action="" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+          </div>          
+        </div>
+    </div>
+{% endblock %}
